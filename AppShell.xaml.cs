@@ -104,7 +104,7 @@ namespace IntelligentKioskSample
 
                 this.TogglePaneButton.Focus(FocusState.Programmatic);
 
-                this.NavigateToStartingPage();
+                //this.NavigateToStartingPage();
             };
 
             this.RootSplitView.RegisterPropertyChangedCallback(

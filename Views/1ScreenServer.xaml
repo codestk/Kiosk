@@ -7,7 +7,46 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="Firebrick" VerticalAlignment="Top" HorizontalAlignment="Center">
 
+        <RelativePanel Width="1200"  Height="897" HorizontalAlignment="Left" Background="DeepSkyBlue" VerticalAlignment="Top">
+
+            <MediaPlayerElement Background="Aquamarine"  x:Name="mediaPlayer" HorizontalAlignment="Left" AreTransportControlsEnabled="False" AutoPlay="True" Height="680" Width="1200" VerticalAlignment="Top" />
+        </RelativePanel>
+
+        <RelativePanel      HorizontalAlignment="Left" VerticalAlignment="Bottom" FocusVisualPrimaryBrush="{x:Null}">
+            <ScrollViewer x:Name="scrollviewer"    VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Hidden"
+              VerticalScrollMode="Disabled" HorizontalScrollMode="Enabled" Grid.Row="1" Loaded="scrollViewer_Loaded"
+              Unloaded="scrollviewer_Unloaded" Background="{x:Null}" HorizontalAlignment="Stretch">
+                <TextBlock Text="Start:111fdafdilgklnk 213135aaaadjiosfuiafkhafuia46467654113456 fafkjarpikfsan fn nvjkhghga:End" TextWrapping="NoWrap"
+             FontSize="140" VerticalAlignment="Bottom" FocusVisualPrimaryBrush="{x:Null}" RenderTransformOrigin="0.761,0.495" />
+            </ScrollViewer>
+        </RelativePanel>
+
+        <RelativePanel HorizontalAlignment="Right" VerticalAlignment="Top" Background="Yellow">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="320" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="400"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Image   Grid.Column="0" Grid.Row="0" Source="ms-appx:///Assets/squaretile-sdk.png" />
+                <Image   Grid.Column="0" Grid.Row="1" Source="ms-appx:///Assets/RealTime.PNG" />
+            </Grid>
+        </RelativePanel>
+
+        <Button Content="&gt;&gt;" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="20" Opacity="0.5" Background="{x:Null}" Click="Button_Click">
+            <Button.FocusVisualPrimaryBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" />
+                    <GradientStop Color="#FF853939" Offset="1" />
+                </LinearGradientBrush>
+            </Button.FocusVisualPrimaryBrush>
+        </Button>
     </Grid>
 </Page>

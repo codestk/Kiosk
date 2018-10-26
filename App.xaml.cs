@@ -123,10 +123,11 @@ namespace IntelligentKioskSample
                 // Set the TitleBar to Dark Theme
                 var appView = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView();
                 var titleBar = appView.TitleBar;
-                titleBar.BackgroundColor = Windows.UI.Colors.Black;
+                titleBar.BackgroundColor = Windows.UI.Colors.Transparent;
                 titleBar.ForegroundColor = Windows.UI.Colors.White;
-                titleBar.ButtonBackgroundColor = Windows.UI.Colors.Black;
+                titleBar.ButtonBackgroundColor = Windows.UI.Colors.White;
                 titleBar.ButtonForegroundColor = Windows.UI.Colors.White;
+            
             }
 
             // Place our app shell in the current Window
@@ -136,7 +137,9 @@ namespace IntelligentKioskSample
             {
                 // When the navigation stack isn't restored, navigate to the first page
                 // suppressing the initial entrance animation.
-                shell.AppFrame.Navigate(typeof(LandingPage), e.Arguments, new Windows.UI.Xaml.Media.Animation.SuppressNavigationTransitionInfo());
+                // shell.AppFrame.Navigate(typeof(LandingPage), e.Arguments, new Windows.UI.Xaml.Media.Animation.SuppressNavigationTransitionInfo());
+
+                shell.AppFrame.Navigate(typeof(ProductView), e.Arguments, new Windows.UI.Xaml.Media.Animation.SuppressNavigationTransitionInfo());
             }
 
             // Ensure the current window is active
