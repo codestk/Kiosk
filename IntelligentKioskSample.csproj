@@ -98,6 +98,7 @@
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="Assets\Plane.json" />
     <None Include="IntelligentKioskSample_TemporaryKey.pfx" />
     <None Include="packages.config" />
   </ItemGroup>
@@ -171,6 +172,9 @@
     <Compile Include="Controls\PageHeader.xaml.cs">
       <DependentUpon>PageHeader.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Contact.cs" />
+    <Compile Include="Model\GroupInfoList.cs" />
+    <Compile Include="Model\Item.cs" />
     <Compile Include="NavMenuItem.cs" />
     <Compile Include="SettingsHelper.cs" />
     <Compile Include="Util.cs" />
@@ -218,8 +222,20 @@
       <DependentUpon>MallKioskPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MallKioskDemoConfig\MallKioskDemoSettings.cs" />
+    <Compile Include="Views\MasterDetailSelection\DetailsPage.xaml.cs">
+      <DependentUpon>DetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MasterDetailSelection\MasterDetailSelection.xaml.cs">
+      <DependentUpon>MasterDetailSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MasterDetailSelection\SamplesPane.xaml.cs">
+      <DependentUpon>SamplesPane.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Product.xaml.cs">
       <DependentUpon>Product.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductDetails.xaml.cs">
+      <DependentUpon>ProductDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ProductView.xaml.cs">
       <DependentUpon>ProductView.xaml</DependentUpon>
@@ -276,6 +292,8 @@
     <Content Include="Assets\Bg\76.jpg" />
     <Content Include="Assets\Bg\iconLogo.png" />
     <Content Include="Assets\Bg\kisspng-network-effect-economics-market-afacere-sailing-icon-5adfd47dee41d2.7695987015246183659759.png" />
+    <Content Include="Assets\Bg\section-gradient-bottom.svg" />
+    <Content Include="Assets\Bg\section-gradient-top.svg" />
     <Content Include="Assets\BingNewsAnalytics.png" />
     <Content Include="Assets\BingVisualSearch.jpg" />
     <Content Include="Assets\bored-clipart-bored-student-9.gif" />
@@ -294,6 +312,11 @@
     <Content Include="Assets\Mp4\Demo.mkv" />
     <Content Include="Assets\oxford-face.png" />
     <Content Include="Assets\plants-1252235.jpg" />
+    <Content Include="Assets\Product1\p1.jpg" />
+    <Content Include="Assets\Product1\p2.jpg" />
+    <Content Include="Assets\Product1\p3.jpg" />
+    <Content Include="Assets\Product1\p4.jpg" />
+    <Content Include="Assets\Product1\p5.jpg" />
     <Content Include="Assets\RealTime.PNG" />
     <Content Include="Assets\RealtimeDriverMonitoring.jpg" />
     <Content Include="Assets\RealTimeFromVideo.PNG" />
@@ -451,13 +474,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\MasterDetailSelection\DetailsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MasterDetailSelection\MasterDetailSelection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MasterDetailSelection\SamplesPane.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Product.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ProductView.xaml">
+    <Page Include="Views\ProductDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProductView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\RealTimeDemo.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -519,6 +558,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="LottieUWP">
+      <Version>2.8.0</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction">
       <Version>0.10.0-preview</Version>
     </PackageReference>
