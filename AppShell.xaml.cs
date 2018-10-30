@@ -98,6 +98,8 @@ namespace IntelligentKioskSample
         {
             this.InitializeComponent();
 
+            //Window.Current.CoreWindow.PointerCursor = null;
+
             this.Loaded += (sender, args) =>
             {
                 Current = this;

@@ -32,6 +32,9 @@ namespace IntelligentKioskSample.Views
             {
                 MasterListView.ItemsSource = Contacts;
             }
+
+
+           
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -221,8 +224,37 @@ namespace IntelligentKioskSample.Views
 
             //MySamplesPane.SamplesSplitView.IsPaneOpen = !MySamplesPane.SamplesSplitView.IsPaneOpen;
         }
+
         #endregion
 
-     
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ProductView));
+        }
+
+      
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            int max = Contacts.Count;
+            int a = MasterListView.SelectedIndex - 1;
+            if (a<0)
+            {
+                a = 0;
+            }
+            MasterListView.SelectedIndex = a;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            int max = Contacts.Count;
+            int a = MasterListView.SelectedIndex +1;
+            if (a>=max)
+            {
+                a = max - 1;
+
+            }
+            MasterListView.SelectedIndex = a;
+        }
     }
 }

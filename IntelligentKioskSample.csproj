@@ -288,6 +288,8 @@
     <Content Include="Assets\bg1.png" />
     <Content Include="Assets\Bg\11592.jpg" />
     <Content Include="Assets\Bg\12Circle.png" />
+    <Content Include="Assets\Bg\40685e1ac0945efc2a152bfbaf68d393.jpg" />
+    <Content Include="Assets\Bg\598754cc2758e045377baee08f42afc4.jpg" />
     <Content Include="Assets\Bg\653.jpg" />
     <Content Include="Assets\Bg\76.jpg" />
     <Content Include="Assets\Bg\iconLogo.png" />
@@ -303,6 +305,8 @@
     <Content Include="Assets\flower-border-1265114_1920.png" />
     <Content Include="Assets\grass-150246.png" />
     <Content Include="Assets\GreetingKiosk.JPG" />
+    <Content Include="Assets\icon\Forward.svg" />
+    <Content Include="Assets\icon\Rewind.svg" />
     <Content Include="Assets\ImageCollectionInsights.JPG" />
     <Content Include="Assets\male_blue.png" />
     <Content Include="Assets\EmotionRecognition.PNG" />
