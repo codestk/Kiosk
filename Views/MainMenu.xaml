@@ -10,11 +10,11 @@
         <x:Double x:Key="ButtonFontSize1">48</x:Double>
     </Page.Resources>
     <Page.Background>
-        <ImageBrush ImageSource="ms-appx:///Assets/flower-border-1265114_1920.png" Stretch="UniformToFill"/>
+        <ImageBrush ImageSource="ms-appx:///Assets/Bg/Bg1.jpg" Stretch="UniformToFill"/>
     </Page.Background>
 
 
-    <Grid   Padding="0,0,100,0" Background="Transparent">
+    <Grid   Padding="0,0,100,0" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center">
    
 
         <RelativePanel Height="697" HorizontalAlignment="Right">
@@ -25,12 +25,12 @@
 
 
         </RelativePanel>
-        <RelativePanel Height="1000" VerticalAlignment="Center" HorizontalAlignment="Left">
-            <Grid Height="478" Margin="0,263,0,-162.6">
-                <Image x:Name="capturedPhoto" HorizontalAlignment="Right" VerticalAlignment="Top" Width="839" RenderTransformOrigin="0.5,0.5"   Source="ms-appx:///Assets/bored-clipart-bored-student-9.gif" />
-            </Grid>
-            <TextBlock Height="100"  FontSize="50"  Text="ยินดีต้อนรับเข้าสู่....................................................." TextWrapping="Wrap" VerticalAlignment="Center"  RenderTransformOrigin="0.5,0.5" Margin="100,800,0,0" Width="1609" FocusVisualPrimaryBrush="#FF093EF0" />
-        </RelativePanel>
+        
+            
+                <Image x:Name="capturedPhoto" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5"   Source="ms-appx:///Assets/icon/main@2x.png" Stretch="Uniform" Width="555" Height="441" Margin="419,129,835,330" />
+            
+            <TextBlock Height="100"  FontSize="50"  Text="ยินดีต้อนรับเข้าสู่....................................................." TextWrapping="Wrap" VerticalAlignment="Center"  RenderTransformOrigin="0.5,0.5" Margin="100,800,0,0" Width="1609" FocusVisualPrimaryBrush="Aqua"  Foreground="White"/>
+       
     </Grid>
 
 

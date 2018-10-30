@@ -41,7 +41,8 @@ namespace IntelligentKioskSample.Views
             try
             {
                 Uri pathUri = new Uri("ms-appx:///Assets/Mp4/Demo.mkv");
-                mediaPlayer.Source = MediaSource.CreateFromUri(pathUri);
+                //mediaPlayer.Source = MediaSource.CreateFromUri(pathUri);
+                mediaPlayer.Source = pathUri;
             }
             catch (Exception ex)
             {
@@ -103,13 +104,10 @@ namespace IntelligentKioskSample.Views
             {
                 if (timer.Interval.Ticks == 300)
                 {
-                    if (scrollviewer.HorizontalOffset == 0)
-                    {
-                        Task.Delay(TimeSpan.FromSeconds(22));
-                    }
+                   
 
                     //each time set the offset to scrollviewer.HorizontalOffset + 5
-                    scrollviewer.ScrollToHorizontalOffset(scrollviewer.HorizontalOffset + 5);
+                    scrollviewer.ScrollToHorizontalOffset(scrollviewer.HorizontalOffset + 2);
                     //if the scrollviewer scrolls to the end, scroll it back to the start.
                     if (scrollviewer.HorizontalOffset == (scrollviewer.ScrollableWidth))
                     {

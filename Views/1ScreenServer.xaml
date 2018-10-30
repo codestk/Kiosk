@@ -5,48 +5,62 @@
     xmlns:local="using:IntelligentKioskSample.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Width="Auto" Height="Auto" Padding="50">
+    <Page.Background>
+        <ImageBrush ImageSource="ms-appx:///Assets/Bg/653.jpg" Stretch="Fill"/>
+    </Page.Background>
 
-    <Grid Background="Firebrick" VerticalAlignment="Top" HorizontalAlignment="Center">
+    <Grid  >
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Assets/Bg/Atv.png" Stretch="Fill"/>
+        </Grid.Background>
 
-        <RelativePanel Width="1200"  Height="897" HorizontalAlignment="Left" Background="DeepSkyBlue" VerticalAlignment="Top">
 
-            <MediaPlayerElement Background="Aquamarine"  x:Name="mediaPlayer" HorizontalAlignment="Left" AreTransportControlsEnabled="False" AutoPlay="True" Height="680" Width="1200" VerticalAlignment="Top" />
-        </RelativePanel>
 
-        <RelativePanel      HorizontalAlignment="Left" VerticalAlignment="Bottom" FocusVisualPrimaryBrush="{x:Null}">
+
+
+        <Viewbox HorizontalAlignment="Left"  Height="810" Margin="60" VerticalAlignment="Top"   Stretch="Fill">
+               
+
+                <MediaElement Name="mediaPlayer" HorizontalAlignment="Left"  Margin="0" VerticalAlignment="Top" Width="1300"/>
+                <!--<MediaPlayerElement Margin="50" Background="Transparent"  x:Name="mediaPlayer" HorizontalAlignment="Left" AreTransportControlsEnabled="False" AutoPlay="True" Height="880" Width="1200" VerticalAlignment="Top" />-->
+            </Viewbox>
+       
+
+
+
+
+        <Grid VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="60,0,60,210" Background="Black">
             <ScrollViewer x:Name="scrollviewer"    VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Hidden"
               VerticalScrollMode="Disabled" HorizontalScrollMode="Enabled" Grid.Row="1" Loaded="scrollViewer_Loaded"
-              Unloaded="scrollviewer_Unloaded" Background="{x:Null}" HorizontalAlignment="Stretch">
-                <TextBlock Text="Start:111fdafdilgklnk 213135aaaadjiosfuiafkhafuia46467654113456 fafkjarpikfsan fn nvjkhghga:End" TextWrapping="NoWrap"
-             FontSize="140" VerticalAlignment="Bottom" FocusVisualPrimaryBrush="{x:Null}" RenderTransformOrigin="0.761,0.495" />
+              Unloaded="scrollviewer_Unloaded" Background="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                <TextBlock Text="Start:The Universal Windows Platform (UWP) background task API allows apps to execute code periodically, execute code in response to certain events such as incoming push notifications or the acquisition of an internet connection, and more—even when the apps aren't running. In this course, learn how to use the Universal Windows Platform (UWP) background task API in development. Instructor Scott Peterson introduces background tasks, triggers, and conditions. In addition, he shows examples of how and when these background tasks should be used.:End" TextWrapping="NoWrap"
+           Foreground="White"    FontSize="50" FocusVisualPrimaryBrush="{x:Null}" RenderTransformOrigin="0.761,0.495" />
             </ScrollViewer>
-        </RelativePanel>
+        </Grid>
 
-        <RelativePanel HorizontalAlignment="Right" VerticalAlignment="Top" Background="Yellow">
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="320" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="400"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                </Grid.RowDefinitions>
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,100,80,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
 
-                <Image   Grid.Column="0" Grid.Row="0" Source="ms-appx:///Assets/squaretile-sdk.png" />
-                <Image   Grid.Column="0" Grid.Row="1" Source="ms-appx:///Assets/RealTime.PNG" />
-            </Grid>
-        </RelativePanel>
+            <Image Opacity="1"   Grid.Column="0" Grid.Row="0" Source="ms-appx:///Assets/icon/219x127.png" Height="234" >
+                <Image.FocusVisualPrimaryBrush>
+                    <ImageBrush/>
+                </Image.FocusVisualPrimaryBrush>
+            </Image>
+            <Image     Grid.Column="0" Grid.Row="1" Source="ms-appx:///Assets/icon/RE1Mu3b.png" HorizontalAlignment="Stretch" Margin="0,50,0,0" Stretch="Uniform" />
+        </Grid>
 
-        <Button Content="&gt;&gt;" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="20" Opacity="0.5" Background="{x:Null}" Click="Button_Click">
-            <Button.FocusVisualPrimaryBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" />
-                    <GradientStop Color="#FF853939" Offset="1" />
-                </LinearGradientBrush>
-            </Button.FocusVisualPrimaryBrush>
+
+        <Button Content="&gt;&gt;" HorizontalAlignment="Right"   VerticalAlignment="Bottom" FontSize="50" Opacity="0.5" Background="{x:Null}" Click="Button_Click">
+           
         </Button>
     </Grid>
 </Page>

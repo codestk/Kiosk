@@ -22,7 +22,7 @@
     </Page.Resources>
 
     <Page.Background>
-        <ImageBrush   ImageSource="ms-appx:///Assets/Bg/11592.jpg" Stretch="UniformToFill"   />
+        <ImageBrush   ImageSource="ms-appx:///Assets/Bg/11592.jpg" Stretch="UniformToFill"  Opacity=".5"  />
     </Page.Background>
 
     <Grid  x:Name="layoutRoot" Opacity="1" HorizontalAlignment="Left" Width="1920">
